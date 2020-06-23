@@ -1,5 +1,6 @@
 const sqlite = require('better-sqlite3')('./db/wireguard.db');
 const fs = require('fs');
+const execSync = require('child_process').execSync;
 
 
 exports.clientConfig = (interface, client) => {
@@ -40,3 +41,11 @@ exports.clientCard = (client) => {
 	return render;
 }
 
+exports.clientMake = (client) => {
+	let prkey = execSync('wg genkey');
+	let pkey = execSync(`echo "${prkey}" | wg pubkey`);
+	let prekey = execSync('wg genpsk');
+	prkey= prkey.replace(/\n/, "");
+	pkey = pkey.replace(/\n/, "");
+	prekey = prekey.replace(/\n/, "");
+}

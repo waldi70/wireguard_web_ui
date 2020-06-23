@@ -217,10 +217,12 @@ io.on('connection', (socket) => {
 		socket.emit('clientContent',clientConf.clientCard(0));
 	});//end of socket.on msg_ready
 		//send client config
-		socket.on('clientConfig', function(msg){
-			socket.emit('clientConfig', clientConf.clientConfig("wg0","d.walraet"));
-		});
-	//});//end of socket.on msg_ready
+	socket.on('clientConfig', function(msg){
+		socket.emit('clientConfig', clientConf.clientConfig("wg0","d.walraet"));
+	});
+	socket.on('clientMake', function(msg){
+		//
+	});
 });
 
 const PORT = process.env.PORT || 3000;
