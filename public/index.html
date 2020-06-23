@@ -28,6 +28,16 @@
 	position:absolute;
 	bottom:-2px;
 	right:3px;
+}
+.nav-container{
+	position: relative;
+}
+#clientAdd{
+	position:absolute;
+	right:1rem;
+	top:50%;
+	transform:translateY(-50%);
+}
 </style>
 
 </head>
@@ -378,7 +388,8 @@
           <div class="row" id="server">
           </div>
           <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Peers</li>
+            <li class="breadcrumb-item active">Peers
+	    </li>
           </ol>
           <!-- Content Row -->
 
@@ -451,9 +462,12 @@
               </div>
             </div>
           </div>
+	  <div class="nav-container">
           <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Clients</li>
+            <li class="breadcrumb-item active">client</li>
           </ol>
+	  <button id="clientAdd"  class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addClient"><i class="fas fa-user-plus"> Create new client</i></button>
+	  </div>
           <!-- Content Row -->
           <div class="row" id="accordionExample">
 		  <!--<div class="bs-example">
@@ -506,6 +520,23 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="modal fade" id="addClient" tabindex="-1" role="dialog" aria-labelledby="clientAddLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="clientAddLabel">Add new client</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">x</span>
+				</button>
+			  </div>
+			  <div class="modal-body"></div>
+			  <div class="modal-footer">
+				  <button class="bnt btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+				  <a class="btn btn-primary" href="#">Save</a>
+			  </div>
+		  </div>
+	  </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
