@@ -530,9 +530,27 @@
 					<span aria-hidden="true">x</span>
 				</button>
 			  </div>
-			  <div class="modal-body"></div>
+			  <div class="modal-body">
+				  <form>
+  					<div class="form-row align-items-center">
+    						<div class="col-sm-6 my-1">
+      							<label class="sr-only" for="inlineFormInput">Name</label>
+      							<input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+    						</div>
+    						<div class="col-sm-6 my-1">
+      							<label class="sr-only" for="inlineFormInputGroup">Username</label>
+      							<div class="input-group mb-2">
+        							<div class="input-group-prepend">
+          								<div class="input-group-text">@</div>
+        							</div>
+        							<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+      							</div>
+    						</div>
+					</div>
+				  </form>
+			  </div>
 			  <div class="modal-footer">
-				  <button class="bnt btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+				  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
 				  <a class="btn btn-primary" href="#">Save</a>
 			  </div>
 		  </div>
